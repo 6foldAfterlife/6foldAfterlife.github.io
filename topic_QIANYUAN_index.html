@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>潜渊 - 六千余生</title>
+    <!-- 引入 Tailwind CSS 进行快速页面美化 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // 自定义古风暗红色，用于点缀
+                        primary: '#8b1d1d', 
+                    },
+                    fontFamily: {
+                        // 优先使用宋体/明体等衬线字体增加文学感
+                        serif: ['"Noto Serif SC"', '"Songti SC"', 'STSong', 'serif'],
+                        sans: ['"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 自定义滚动条美化 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f5f5f4; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+    </style>
+</head>
+<body class="bg-stone-100 text-stone-800 font-sans antialiased selection:bg-primary selection:text-white">
+
+    <!-- 主容器，居中且限制最大宽度 -->
+    <main class="max-w-3xl mx-auto my-6 sm:my-12 bg-white sm:rounded-xl shadow-sm sm:shadow-md overflow-hidden">
+        
+        <!-- 头部区域 (标题与信息) -->
+        <header class="pt-12 pb-8 px-8 sm:px-12 border-b border-stone-100 text-center">
+            <h1 class="text-4xl sm:text-5xl font-serif font-bold text-stone-900 tracking-wider mb-6">潜渊</h1>
+            
+            <div class="flex flex-wrap justify-center items-center gap-4 text-sm sm:text-base text-stone-500">
+                <span class="flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                    作者：六千余生
+                </span>
+                <span class="text-stone-300">|</span>
+                <span class="flex items-center gap-1 px-2 py-1 bg-stone-100 rounded text-stone-700 font-medium">
+                    CP: 胤禛 x 胤禩
+                </span>
+            </div>
+        </header>
+
+        <!-- 内容区域 -->
+        <article class="p-8 sm:p-12">
+            
+            <!-- 简介区 -->
+            <section class="mb-12">
+                <h3 class="text-lg font-bold text-stone-800 mb-4 flex items-center gap-2">
+                    <span class="w-1 h-5 bg-primary rounded-full"></span>
+                    Summary / 简介
+                </h3>
+                
+                <div class="prose prose-stone max-w-none text-stone-600 leading-loose text-justify space-y-4">
+                    <p>胤禛重生了。</p>
+                    <p>上一世，他潜心谋划，蛰伏多年，最终咸鱼翻身成为帝王。手握生杀大权，享尽荣华富贵，心中却始终有一桩未解心结：曾经亲密无间的兄弟、亦步亦趋的臣子、至亲至爱的母亲……竟无一人视他继位为天命所归。雍正帝在位期间，群臣畏惧、不得民心，战事频发却屡遭败绩，八旗将士折损无数，家家戴孝，疆土痛失。</p>
+                    <p>这一世，胤禛决心夺回属于他的一切！他不但要重登九五至尊，更要坐得名正言顺。他要让那曾与他情如水火、势如敌国的八弟，心甘情愿地俯首称臣，亲手为他奉上帝位！</p>
+                    <p>凭借前世记忆，胤禛步步为营，终于等到皇父驾崩之夜——时机已至，心腹重臣率兵封守畅春园，一切尽在掌控之中。</p>
+                    <p>胤禛目光深沉，信心十足地迈入殿门——</p>
+                    <!-- 强调结局转折 -->
+                    <p class="text-center font-bold text-xl text-primary mt-6 tracking-widest font-serif">
+                        那明黄龙椅之上，竟已端坐他人！
+                    </p>
+                </div>
+            </section>
+
+            <!-- 章节列表区 -->
+            <section>
+                <h3 class="text-lg font-bold text-stone-800 mb-4 flex items-center gap-2">
+                    <span class="w-1 h-5 bg-primary rounded-full"></span>
+                    颜色部分 (特殊章节)
+                </h3>
+                
+                <div class="grid grid-cols-1 gap-3">
+                    <!-- 章节卡片链接 -->
+                    <a href="topic_QIANYUAN_15.html" class="group flex items-center justify-between p-4 bg-stone-50 hover:bg-red-50 border border-stone-200 hover:border-primary/40 rounded-lg transition-all duration-200">
+                        <div class="flex items-center gap-3">
+                            <span class="text-stone-400 font-mono text-sm group-hover:text-primary transition-colors">CH.15</span>
+                            <span class="font-medium text-stone-700 group-hover:text-primary transition-colors">失控（上/下）</span>
+                        </div>
+                        <svg class="w-5 h-5 text-stone-400 group-hover:text-primary transform group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                    
+                    <!-- 预留其他章节的位置，可以复制上面的 <a> 标签 -->
+                </div>
+            </section>
+
+            <!-- 隐藏的下载链接 (优化了注释结构，方便随时开启) -->
+            <!-- 
+            <section class="mt-8 p-4 bg-stone-50 rounded-lg border border-stone-200 text-center">
+                <p class="text-sm text-stone-500 mb-2">正文TXT下载（如果没有自动下载，请右键点击“下载”另存为）</p>
+                <a href="错位关系创伤后遗症与心理疏导.txt" download="错位关系创伤后遗症与心理疏导" class="inline-flex items-center gap-2 px-4 py-2 bg-stone-800 text-white rounded hover:bg-stone-700 transition-colors text-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    点击下载
+                </a>
+            </section> 
+            -->
+
+        </article>
+
+        <!-- 底部导航 -->
+        <footer class="bg-stone-50 p-6 border-t border-stone-200 text-center">
+            <a href="index.html" class="inline-flex items-center justify-center gap-2 text-stone-500 hover:text-primary font-medium transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                返回主页
+            </a>
+        </footer>
+
+    </main>
+
+</body>
+</html>

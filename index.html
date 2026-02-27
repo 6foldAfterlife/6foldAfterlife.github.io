@@ -1,28 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<title>Main Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档存稿 - 主页</title>
+    <!-- 引入 Tailwind CSS 进行快速页面美化 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8b1d1d', // 古风暗红色
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif SC"', '"Songti SC"', 'STSong', 'serif'],
+                        sans: ['"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 自定义滚动条美化 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f5f5f4; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+    </style>
 </head>
-<body>
-   
-  
+<body class="bg-stone-100 text-stone-800 font-sans antialiased selection:bg-primary selection:text-white">
 
-<h1>文档存稿</h1>
-  
-<p>写的一点东西，什么主题都有。点击链接前请确认内容不会触及您的雷区。</p>
-<p></p>
-<p>史同：</p>
-<p><a href="topic_QIANYUAN_index.html">【四八】潜渊</a></p>
-<p><a href="topic_48_index.html">【四八】错位关系创伤后遗症与心理疏导</a></p>
-<p><a href="topic_148_index.html">【十四八】重逢的十四昼夜</a></p>
-<p><a href="temp_page.html">【all八】合集</a></p>
-  <!--
-<p>游戏同人：</p>
-<a href="temp_page.html">todo</a>
-<p>二次同人：</p>
-<a href="temp_page.html">todo</a>
-<p>废话文学：</p>
-<a href="temp_page.html">todo</a>
-//-->
+    <!-- 主容器 -->
+    <main class="max-w-3xl mx-auto my-0 sm:my-12 bg-white sm:rounded-xl shadow-sm sm:shadow-md overflow-hidden min-h-screen sm:min-h-0">
+        
+        <!-- 头部区域 (网站标题与免责声明) -->
+        <header class="pt-16 pb-10 px-8 sm:px-12 border-b border-stone-100 text-center relative overflow-hidden">
+            <!-- 装饰性背景元素 -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-primary opacity-80 rounded-b-md"></div>
+            
+            <h1 class="text-4xl sm:text-5xl font-serif font-bold text-stone-900 tracking-widest mb-6">文档存稿</h1>
+            
+            <p class="text-base text-stone-400 tracking-wider font-serif leading-loose">
+                写的一点东西，什么主题都有。<br>
+                <span class="text-sm opacity-70">※ 点击链接前请确认内容不会触及您的雷区</span>
+            </p>
+        </header>
+
+        <!-- 内容区域 (各板块分类) -->
+        <article class="p-8 sm:p-12 space-y-12">
+            
+            <!-- 分类：史同 -->
+            <section>
+                <h2 class="text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3 border-b border-stone-100 pb-3 font-serif tracking-wide">
+                    <span class="w-2 h-2 bg-primary rotate-45"></span>
+                    史同
+                </h2>
+                
+                <div class="grid grid-cols-1 gap-4">
+                    <a href="topic_QIANYUAN_index.html" class="group flex items-center p-4 bg-stone-50 hover:bg-red-50/50 border border-stone-200 hover:border-primary/40 rounded-lg transition-all duration-300">
+                        <div class="flex-1">
+                            <h3 class="font-medium text-stone-800 group-hover:text-primary transition-colors text-xl">【四八】潜渊</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-stone-300 group-hover:text-primary transform group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+
+                    <a href="topic_48_index.html" class="group flex items-center p-4 bg-stone-50 hover:bg-red-50/50 border border-stone-200 hover:border-primary/40 rounded-lg transition-all duration-300">
+                        <div class="flex-1">
+                            <h3 class="font-medium text-stone-800 group-hover:text-primary transition-colors text-xl">【四八】错位关系创伤后遗症与心理疏导</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-stone-300 group-hover:text-primary transform group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+
+                    <a href="topic_148_index.html" class="group flex items-center p-4 bg-stone-50 hover:bg-red-50/50 border border-stone-200 hover:border-primary/40 rounded-lg transition-all duration-300">
+                        <div class="flex-1">
+                            <h3 class="font-medium text-stone-800 group-hover:text-primary transition-colors text-xl">【十四八】重逢的十四昼夜</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-stone-300 group-hover:text-primary transform group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+
+                    <a href="temp_page.html" class="group flex items-center p-4 bg-stone-50 hover:bg-red-50/50 border border-stone-200 hover:border-primary/40 rounded-lg transition-all duration-300">
+                        <div class="flex-1">
+                            <h3 class="font-medium text-stone-800 group-hover:text-primary transition-colors text-xl">【all八】合集</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-stone-300 group-hover:text-primary transform group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 待定/施工中板块 (将原本的注释代码进行了视觉上的占位优化) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 opacity-60">
+                
+                <!-- 分类：游戏同人 -->
+                <section>
+                    <h2 class="text-xl font-bold text-stone-500 mb-4 flex items-center gap-2 border-b border-stone-100 pb-2 font-serif">
+                        <span class="w-1.5 h-1.5 bg-stone-400 rotate-45"></span>
+                        游戏同人
+                    </h2>
+                    <div class="p-4 bg-stone-50 border border-dashed border-stone-300 rounded-lg text-center cursor-not-allowed">
+                        <span class="text-stone-400 text-base flex items-center justify-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            施工中，敬请期待
+                        </span>
+                    </div>
+                </section>
+
+                <!-- 分类：二次同人 -->
+                <section>
+                    <h2 class="text-xl font-bold text-stone-500 mb-4 flex items-center gap-2 border-b border-stone-100 pb-2 font-serif">
+                        <span class="w-1.5 h-1.5 bg-stone-400 rotate-45"></span>
+                        二次同人
+                    </h2>
+                    <div class="p-4 bg-stone-50 border border-dashed border-stone-300 rounded-lg text-center cursor-not-allowed">
+                        <span class="text-stone-400 text-base flex items-center justify-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            施工中，敬请期待
+                        </span>
+                    </div>
+                </section>
+
+                <!-- 分类：废话文学 -->
+                <section>
+                    <h2 class="text-xl font-bold text-stone-500 mb-4 flex items-center gap-2 border-b border-stone-100 pb-2 font-serif">
+                        <span class="w-1.5 h-1.5 bg-stone-400 rotate-45"></span>
+                        废话文学
+                    </h2>
+                    <div class="p-4 bg-stone-50 border border-dashed border-stone-300 rounded-lg text-center cursor-not-allowed">
+                        <span class="text-stone-400 text-base flex items-center justify-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            施工中，敬请期待
+                        </span>
+                    </div>
+                </section>
+
+                <!-- 分类：史料 -->
+                <section>
+                    <h2 class="text-xl font-bold text-stone-500 mb-4 flex items-center gap-2 border-b border-stone-100 pb-2 font-serif">
+                        <span class="w-1.5 h-1.5 bg-stone-400 rotate-45"></span>
+                        史料
+                    </h2>
+                    <div class="p-4 bg-stone-50 border border-dashed border-stone-300 rounded-lg text-center cursor-not-allowed">
+                        <span class="text-stone-400 text-base flex items-center justify-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            施工中，敬请期待
+                        </span>
+                    </div>
+                </section>
+
+            </div>
+
+        </article>
+
+        <!-- 底部页脚 -->
+        <footer class="bg-stone-50 py-6 border-t border-stone-200 text-center">
+            <p class="text-stone-400 text-base font-serif">© 文档存稿</p>
+        </footer>
+
+    </main>
+
 </body>
 </html>

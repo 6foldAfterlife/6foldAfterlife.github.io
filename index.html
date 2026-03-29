@@ -88,7 +88,35 @@
                 </div>
             </section>
 
-            <!-- 待定/施工中板块 (将原本的注释代码进行了视觉上的占位优化) -->
+            <!-- 新增板块：密码保护区 -->
+            <section>
+                <h2 class="text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3 border-b border-stone-100 pb-3 font-serif tracking-wide">
+                    <span class="w-2 h-2 bg-primary rotate-45"></span>
+                    私密存档
+                </h2>
+                
+                <div class="p-6 bg-stone-50 border border-stone-200 rounded-lg">
+                    <p class="text-stone-600 mb-4 font-serif text-sm sm:text-base">中奖的姐妹请输入密码：</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+                        <!-- 输入框 (绑定了回车键提交事件) -->
+                        <input type="password" id="secretPwd" class="border border-stone-300 rounded-md px-4 py-2 text-stone-800 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary w-full sm:w-64 transition-all" placeholder="请输入密码" onkeypress="if(event.key === 'Enter') verifyPassword()">
+                        
+                        <!-- 验证按钮 -->
+                        <button onclick="verifyPassword()" class="bg-primary text-white px-6 py-2 rounded-md hover:bg-[#6a1515] transition-colors shadow-sm w-full sm:w-auto font-medium font-serif tracking-widest">
+                            验证
+                        </button>
+                    </div>
+
+                    <!-- 错误提示信息 (默认隐藏) -->
+                    <p id="pwd-error" class="text-sm text-red-600 mt-3 hidden flex items-center gap-1 opacity-90">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        密码错误，请核对后重试
+                    </p>
+                </div>
+            </section>
+
+            <!-- 待定/施工中板块 -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 opacity-60">
                 
                 <!-- 分类：游戏同人 -->
@@ -158,5 +186,26 @@
 
     </main>
 
+    <!-- 密码验证的 JavaScript 逻辑 -->
+    <script>
+        function verifyPassword() {
+            // 获取用户输入的密码
+            const pwd = document.getElementById('secretPwd').value;
+            // 获取错误提示的元素
+            const errorMsg = document.getElementById('pwd-error');
+            
+            // 隐藏错误提示（重置状态）
+            errorMsg.classList.add('hidden');
+
+            // 【重要】在这里设置你的密码和跳转链接
+            if (pwd === "20264899") { 
+                // 密码正确，跳转到指定页面
+                window.location.href = "secret_archive.html"; 
+            } else {
+                // 密码错误，显示提示信息
+                errorMsg.classList.remove('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
